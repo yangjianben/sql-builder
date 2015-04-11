@@ -1,19 +1,19 @@
 package com.github.jonathanhds.sqlbuilder.select;
 
-import com.github.jonathanhds.sqlbuilder.Context;
-import com.github.jonathanhds.sqlbuilder.TerminalExpression;
-
 import java.sql.SQLException;
 import java.util.List;
 
+import com.github.jonathanhds.sqlbuilder.Context;
+import com.github.jonathanhds.sqlbuilder.TerminalExpression;
+
 public class Where extends Condition implements TerminalExpression {
 
-	Where(Context context) {
+	public Where(Context context) {
 		super(context);
 		add("1 = 1");
 	}
 
-	Where(Context context, String condition) {
+	public Where(Context context, String condition) {
 		super(context);
 		add(condition);
 	}

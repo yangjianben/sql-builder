@@ -2,14 +2,14 @@ package com.github.jonathanhds.sqlbuilder.select;
 
 import com.github.jonathanhds.sqlbuilder.Context;
 
-class AndCondition extends Condition {
+public class AndCondition extends Condition {
 
-	AndCondition(Context context) {
+	public AndCondition(Context context) {
 		super(context);
 	}
 
 	@Override
-	protected String getPrefix() {
+	public String getPrefix() {
 		return "AND";
 	}
 

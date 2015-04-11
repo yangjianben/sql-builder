@@ -1,8 +1,9 @@
 package com.github.jonathanhds.sqlbuilder.select;
 
-import com.github.jonathanhds.sqlbuilder.Context;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
+
+import com.github.jonathanhds.sqlbuilder.Context;
 
 abstract class Condition {
 
@@ -16,15 +17,15 @@ abstract class Condition {
 		context.appendLine(getPrefix() + " " + condition);
 	}
 
-	void add(Object condition, Object parameter) {
+	public void add(Object condition, Object parameter) {
 		if (parameter != null) {
-			add(condition, new Object[]{parameter});
+			add(condition, new Object[] { parameter });
 		}
 	}
 
 	void add(String condition, String parameter) {
 		if (StringUtils.isNotBlank(parameter)) {
-			add(condition, new Object[]{parameter});
+			add(condition, new Object[] { parameter });
 		}
 	}
 

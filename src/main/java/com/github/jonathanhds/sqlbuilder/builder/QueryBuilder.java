@@ -1,15 +1,16 @@
 package com.github.jonathanhds.sqlbuilder.builder;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
 import com.github.jonathanhds.sqlbuilder.Context;
 import com.github.jonathanhds.sqlbuilder.Database;
 import com.github.jonathanhds.sqlbuilder.delete.Delete;
 import com.github.jonathanhds.sqlbuilder.insert.Insert;
 import com.github.jonathanhds.sqlbuilder.select.Select;
 import com.github.jonathanhds.sqlbuilder.update.Update;
-
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class QueryBuilder {
 
@@ -54,5 +55,16 @@ public class QueryBuilder {
 	@Override
 	public String toString() {
 		return context.toString();
+	}
+
+	/**
+	 * 
+	 * @return Context
+	 * @Author 杨健/YangJian
+	 * @Date 2015年4月11日 下午2:39:40
+	 * @Version 1.0.0
+	 */
+	public Context getContext() {
+		return this.context;
 	}
 }
