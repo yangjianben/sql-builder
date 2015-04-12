@@ -202,7 +202,7 @@ public class SelectTest {
 	@Test
 	public void selectCountFromTable() throws Exception {
 		Query query = Query.forClass("PERSON", connection);
-		query.eq("name", "Jonathan");// p.name = 'Jonathan'
+		//query.eq("name", "Jonathan");// p.name = 'Jonathan'
 		Integer count = query.getCount();
 		System.out.println(count);
 	}
